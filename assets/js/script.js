@@ -4,53 +4,58 @@ const formulario = $('#formulario-pergunta');
 const input_pergunta = $('#input-pergunta');
 const add_pergunta = $('#adiciona-pergunta');
 const cancelar_pergunta = $('#cancelar-pergunta');
-const deletar_pergunta = $('.deletar-pergunta');
 
 const perguntas = $('#pesquisa-perguntas');
 const enviar_pesquisa = $('#enviar-pesquisa');
 
 const DB_STORAGE = 'database-doity';
-const db = localStorage.getItem(DB_STORAGE);
 
 let form_esta_aberto = false;
+let items = [];
 
 abrir_formulario.on('click', () => openForm());
 cancelar_pergunta.on('click', () => closeForm());
 
-let items = [];
-
 $(window).on('load', () => {
-    items = JSON.parse(db);
-    if (!items) return;
-    $.each(items.reverse(), (_, value) => add_pergunta_template(value));
-});
+    const saved = localStorage.getItem(DB_STORAGE);
 
-add_pergunta.on('click', () => {
-    let value = input_pergunta.val();
-
-    if (value) {
-        // Continuar daqui
-        if (!db) {
-            items.push(value);
-        } else {
-            console.log(...JSON.parse(db))
-            items = [...JSON.parse(db)].unshift(value);
-        }
-
-        localStorage.setItem(DB_STORAGE, JSON.stringify(items));
-
-        add_pergunta_template(value);
-        closeForm();
+    if (saved) {
+        items = JSON.parse(saved);
+        items.slice().reverse().forEach(item => add_pergunta_template(item));
     }
 });
 
-$(document).on('click', '.deletar-pergunta', (e) => {
-    const value = $(e.target).parents('td').prev().data('th');
-    $(e.target).parents('tr').remove();
-    const items = JSON.parse(db);
-    const indexToBeRemove = items.findIndex(item => item === String(value));
-    items.splice(indexToBeRemove, 1);
+add_pergunta.on('click', () => {
+    const value = input_pergunta.val().trim();
+    if (!value) return;
+
+    const db = localStorage.getItem(DB_STORAGE);
+
+    if (!db) {
+        items = [value];
+    } else {
+        items = JSON.parse(db);
+        items.unshift(value);
+    }
+
     localStorage.setItem(DB_STORAGE, JSON.stringify(items));
+
+    add_pergunta_template(value);
+    closeForm();
+});
+
+$(document).on('click', '.deletar-pergunta', (e) => {
+    const value = $(e.target).closest('td').prev().data('th');
+
+    $(e.target).closest('tr').remove();
+
+    let items = JSON.parse(localStorage.getItem(DB_STORAGE)) || [];
+
+    const index = items.indexOf(value);
+    if (index !== -1) {
+        items.splice(index, 1);
+        localStorage.setItem(DB_STORAGE, JSON.stringify(items));
+    }
 });
 
 const openForm = () => {
@@ -73,7 +78,17 @@ const clearInput = () => {
 }
 
 const add_pergunta_template = (value) => {
-    perguntas.prepend(
-        `<tr><td data-th="${value}" style="padding: 17.5px 10px;">${value}</td><td data-th="Ações" style="text-align: center;"><a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11638"><img src="/assets/images/icons-editar-12px.png" width="14px" height="14px" alt=""></a><button class="deletar-pergunta botao-grande" type="button"><img src="assets/images/delete.svg" width="14px" height="14px" alt=""></button></td></tr>`
+    perguntas.prepend(`
+        <tr>
+            <td data-th="${value}" style="padding: 17.5px 10px;">${value}</td>
+            <td data-th="Ações" style="text-align: center;">
+                <a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11638">
+                    <img src="/assets/images/icons-editar-12px.png" width="14" height="14" alt="">
+                </a>
+                <button class="deletar-pergunta botao-grande" type="button">
+                    <img src="assets/images/delete.svg" width="14" height="14" alt="">
+                </button>
+            </td>
+        </tr>`
     );
 }
