@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" data-scrapbook-source="https://doity.com.br/admin/pesquisas/preview/1402" data-scrapbook-create="20251201182507466" data-scrapbook-title="Pesquisa - Doity"><head><link rel="stylesheet" type="text/css" href="avaliar-artigo.css">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" data-scrapbook-source="https://doity.com.br/admin/pesquisas/preview/1402" data-scrapbook-create="20251201182507466" data-scrapbook-title="Pesquisa - Doity"><head><link rel="stylesheet" type="text/css" href="../assets/css/avaliar-artigo.css">
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,17 +24,13 @@
     <meta name="robots" content="noindex">
 
     
-	<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="avaliacao_artigo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/avaliacao_artigo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/pesquisa.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/preview.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/flexbox.css">
 
-	
-    
-    
-
-
-    
-    
     
 <style media="screen">
   .__alert {
@@ -71,291 +67,299 @@
   body.doity .footer .ds-btn-bordered:hover { color: #151515; }
 </style></head>
 
-
-
-<body class="doity admin_preview" data-language="por">
-<!-- :header -->
-<header>
-    <div class="menu-avaliacao">
-        <div class="container-avaliacao ds-items-lados-extremos ds-items-vertical-align-middle" style="margin-bottom:0;">
-            <div class="ds-column-half">
-              <h5 style="color:#fff;">
-                Evento Teste Frontend              </h5>
-            </div>
-            <div class="ds-column-half ds-items-right">
-                              <a href="https://doity.com.br/evento-teste-frontend" class="ds-btn-bordered">
-                  Ir para o evento                </a>
-                          </div>
+  <body class="doity admin_preview" data-language="por">
+    <!-- :header -->
+    <header>
+      <div class="menu-avaliacao">
+        <div class="header-avaliacao container-avaliacao ds-items-lados-extremos ds-items-vertical-align-middle" style="margin-bottom:0;">
+          <div class="ds-column-half">
+            <h5 style="color:#fff;">
+               Visão 360º             
+            </h5>
+          </div>
+          <div class="ds-column-half ds-items-right">
+            <a href="https://doity.com.br/evento-teste-frontend" class="botao-padrao botao-grande botao-erro botao-border">
+                Ir para o evento                
+            </a>
+          </div>
         </div>
+      </div>
+    </header>
 
+    <div id="ajax-loader" style="display: none;">    
+      <div>
+        <img src="../assets/images/ajax-loader-center.gif" id="img-ajax-load-center" alt="">
+        <span class="ajax-loader-message"></span>
+      </div>
     </div>
-</header>
 
-<div id="ajax-loader" style="display: none;">    
-    <div>
-        <img src="ajax-loader-center.gif" id="img-ajax-load-center" alt="">        <span class="ajax-loader-message"></span>
-    </div>
-</div>
-<style type="text/css">
-    #ajax-loader{
-        background-color: #111; 
-        bottom: 0; 
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 1060;
-        background: rgba(0, 0, 0, 0.1);
-    }
-    #ajax-loader div{
-        display: block;
-        height: 10%;
-        left: 50%;
-        margin: -150px 0 0 -280px;
-        outline: medium none;
-        position: fixed;
-        top: 60%;
-        width: 560px;
-        z-index: 2050;
-    }
+    <style type="text/css">
+        #ajax-loader{
+            background-color: #111; 
+            bottom: 0; 
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1060;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        #ajax-loader div{
+            display: block;
+            height: 10%;
+            left: 50%;
+            margin: -150px 0 0 -280px;
+            outline: medium none;
+            position: fixed;
+            top: 60%;
+            width: 560px;
+            z-index: 2050;
+        }
 
-    #ajax-loader span.ajax-loader-message {
-        display: none;
-        position: fixed;
-        background: #FCF8E3;
-        padding: 20px;
-        border-radius: 5px;
-        margin: 0 auto;
-        top: 50%;
-        margin-top: -20px;
-        font-size: 12px;
-        color: #8a6d3b;
-        border: 1px solid #faebcc;
-    }
+        #ajax-loader span.ajax-loader-message {
+            display: none;
+            position: fixed;
+            background: #FCF8E3;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 0 auto;
+            top: 50%;
+            margin-top: -20px;
+            font-size: 12px;
+            color: #8a6d3b;
+            border: 1px solid #faebcc;
+        }
 
-    #img-ajax-load-center{
-        background-color: #000000;          
-        border-radius: 6px;
-        padding: 8px;
-        position:absolute;
-        left:50%;
-        top:50%;
-        margin-left: -24px;
-        margin-top: -24px;
+        #img-ajax-load-center{
+            background-color: #000000;          
+            border-radius: 6px;
+            padding: 8px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left: -24px;
+            margin-top: -24px;
 
 
-        opacity:0.75;
-       -moz-opacity: 0.75;
-       filter: alpha(opacity=75);
-    }
-</style>
+            opacity:0.75;
+          -moz-opacity: 0.75;
+          filter: alpha(opacity=75);
+        }
+    </style>
 
-	<link rel="stylesheet" type="text/css" href="avaliar-artigo.css">
-	<link rel="stylesheet" type="text/css" href="admin_v2.css">
-	<link rel="stylesheet" type="text/css" href="font-awesome.min-1.css">
-	<link rel="stylesheet" type="text/css" href="messages.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/avaliar-artigo.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin_v2.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min-1.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/messages.css">
 
-<div class="dados-avaliacao">
-    <div class="container-avaliacao-apresentacao">
+    <div class="dados-avaliacao">
+      <div class="container-avaliacao-apresentacao">
         <div class="dados-avaliar">
-
-
-
-                <div class="dados-centralizados">
-                    <h1>Evento Teste Frontend</h1>
-                </div>
-                                    <div class="border-dados-pesquisa">
-                        <p></p><p>Queremos saber como foi a sua experiência neste evento. Suas respostas nos ajudarão a melhorar continuamente a organização, o conteúdo e a qualidade dos próximos encontros. Obrigado por dedicar alguns minutos para contribuir com seu feedback!</p>
-<p></p>
-                    </div>
-                                                    <div class="border-dados-pesquisa">
-                        <div class="dados-centralizados">
-                                                        <span><b>Disponível até </b>31/12/2025</span>
-                        </div>
-                    </div>
-                
-
-
-            <!-- Formulário -->
-
-            <h1 style="margin-top:50px;" id="texto-form">Pesquisa de Satisfação</h1>
-
-
-
-                <div class="formulario-dados">
-
-                    
-                        <div class="row">
-                        <span id="pergunta-descricao">1 - Como você avaliaria sua experiência geral no evento?</span> 
-
-                                                    <div class="star-rating">
-                            <span class="rating">
-                                                                        <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11638Nota1" name="data[pergunta][11638][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11638Nota1" class="rating-star">Excelente</label>
-
-                                                                            <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11638Nota2" name="data[pergunta][11638][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11638Nota2" class="rating-star">Bom</label>
-
-                                                                            <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11638Nota3" name="data[pergunta][11638][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11638Nota3" class="rating-star">Razoável</label>
-
-                                                                            <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11638Nota4" name="data[pergunta][11638][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11638Nota4" class="rating-star">Ruim</label>
-
-                                                                            <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11638Nota5" name="data[pergunta][11638][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11638Nota5" class="rating-star">Péssimo</label>
-
-                                                                    </span>
-                              <p style="display: none;" id="item-validacao-1">Esse item não foi avaliado.</p>
-                            </div>
-                            </div><!-- .row -->
-
-                        
-                    
-                        <div class="row">
-                        <span id="pergunta-descricao">2 - O conteúdo apresentado foi relevante para você?</span> 
-
-                                                    <div class="star-rating">
-                            <span class="rating">
-                                                                        <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11639Nota1" name="data[pergunta][11639][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11639Nota1" class="rating-star">Excelente</label>
-
-                                                                            <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11639Nota2" name="data[pergunta][11639][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11639Nota2" class="rating-star">Bom</label>
-
-                                                                            <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11639Nota3" name="data[pergunta][11639][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11639Nota3" class="rating-star">Razoável</label>
-
-                                                                            <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11639Nota4" name="data[pergunta][11639][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11639Nota4" class="rating-star">Ruim</label>
-
-                                                                            <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11639Nota5" name="data[pergunta][11639][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11639Nota5" class="rating-star">Péssimo</label>
-
-                                                                    </span>
-                              <p style="display: none;" id="item-validacao-2">Esse item não foi avaliado.</p>
-                            </div>
-                            </div><!-- .row -->
-
-                        
-                    
-                        <div class="row">
-                        <span id="pergunta-descricao">3 - A qualidade dos palestrantes foi satisfatória?*</span> 
-
-                                                    <div class="star-rating">
-                            <span class="rating">
-                                                                        <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11640Nota1" name="data[pergunta][11640][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11640Nota1" class="rating-star">Excelente</label>
-
-                                                                            <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11640Nota2" name="data[pergunta][11640][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11640Nota2" class="rating-star">Bom</label>
-
-                                                                            <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11640Nota3" name="data[pergunta][11640][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11640Nota3" class="rating-star">Razoável</label>
-
-                                                                            <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11640Nota4" name="data[pergunta][11640][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11640Nota4" class="rating-star">Ruim</label>
-
-                                                                            <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11640Nota5" name="data[pergunta][11640][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11640Nota5" class="rating-star">Péssimo</label>
-
-                                                                    </span>
-                              <p style="display: none;" id="item-validacao-3">Esse item não foi avaliado.</p>
-                            </div>
-                            </div><!-- .row -->
-
-                        
-                    
-                        <div class="row">
-                        <span id="pergunta-descricao">4 - Como você avalia a organização do evento?</span> 
-
-                                                    <div class="star-rating">
-                            <span class="rating">
-                                                                        <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11641Nota1" name="data[pergunta][11641][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11641Nota1" class="rating-star">Excelente</label>
-
-                                                                            <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11641Nota2" name="data[pergunta][11641][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11641Nota2" class="rating-star">Bom</label>
-
-                                                                            <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11641Nota3" name="data[pergunta][11641][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11641Nota3" class="rating-star">Razoável</label>
-
-                                                                            <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11641Nota4" name="data[pergunta][11641][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11641Nota4" class="rating-star">Ruim</label>
-
-                                                                            <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11641Nota5" name="data[pergunta][11641][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11641Nota5" class="rating-star">Péssimo</label>
-
-                                                                    </span>
-                              <p style="display: none;" id="item-validacao-4">Esse item não foi avaliado.</p>
-                            </div>
-                            </div><!-- .row -->
-
-                        
-                    
-                        <div class="row">
-                        <span id="pergunta-descricao">5 - Pergunta exemplo</span> 
-
-                                                    <div class="star-rating">
-                            <span class="rating">
-                                                                        <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11650Nota1" name="data[pergunta][11650][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11650Nota1" class="rating-star">Excelente</label>
-
-                                                                            <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11650Nota2" name="data[pergunta][11650][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11650Nota2" class="rating-star">Bom</label>
-
-                                                                            <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11650Nota3" name="data[pergunta][11650][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11650Nota3" class="rating-star">Razoável</label>
-
-                                                                            <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11650Nota4" name="data[pergunta][11650][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11650Nota4" class="rating-star">Ruim</label>
-
-                                                                            <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11650Nota5" name="data[pergunta][11650][nota]">
-                                      <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11650Nota5" class="rating-star">Péssimo</label>
-
-                                                                    </span>
-                              <p style="display: none;" id="item-validacao-5">Esse item não foi avaliado.</p>
-                            </div>
-                            </div><!-- .row -->
-
-                        
-                                    </div><!-- .formulario-dados -->
-
-
-
-                <div class="row">
-                    <div class="texarea"><label for="PesquisaAvaliacaoComentario">Comentário (obrigatório)</label><textarea name="data[PesquisaAvaliacao][comentario]" rows="3" class="form-control" required="required" cols="30" id="PesquisaAvaliacaoComentario"></textarea></div>                    <br>
-                    <button class="__button-avaliar" type="submit">Enviar</button>                    <div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="9147b88897edd3b6542ca4589e5555f9a3c0f8da%3A" id="TokenFields1616892081"><input type="hidden" name="data[_Token][unlocked]" value="" id="TokenUnlocked826685311"></div>                </div>
-
-
-        </div><!-- .dados-avaliar -->
-    </div><!-- .container-avaliacao-apresentacao -->
-</div><!-- .dados-avaliacao -->
-
-
-
-
-<!-- :footer -->
-<div class="footer" style="padding-left:20px;padding-right:20px;">
-
-    <div class="container-avaliacao ds-items-lados-extremos ds-items-vertical-align-middle" style="margin-bottom:0;">
-
-                  <div class="ds-column-half">
-            <div class="ds-flex-row ds-items-vertical-align-middle">
-              <a href="http://doity.com.br/" target="_blank"><img src="logo-negative.png" width="72px" alt=""></a>
-              <span style="margin-left:10px;color:#fff;font-size:10px;text-transform:uppercase;">Plataforma de Eventos</span>
+          <div class="dados-evento">
+            <div class="dados-centralizados">
+              <h1>Visão 360º</h1>
+            </div>
+            <div class="border-dados-pesquisa">
+              <p>
+                E vem sendo utilizado desde o século XVI, quando um impressor 
+                desconhecido pegou uma bandeja de tipos e os embaralhou para 
+                fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não 
+                só a cinco séculos, como também ao salto para a editoração 
+                eletrônica, permanecendo essencialmente inalterado. Se 
+                popularizou na década de 60, quando a Letraset lançou decalques 
+                contendo passagens de Lorem Ipsum, e mais recentemente quando 
+                passou a ser integrado a softwares de editoração eletrônica como 
+                Aldus PageMaker.
+              </p>
+            </div>
+            <div class="border-dados-pesquisa">
+              <div class="dados-centralizados">
+                <span>
+                  <b>Disponível até 30/04/2032</b>
+                </span>
+              </div>
             </div>
           </div>
 
-        
+          <!-- Formulário -->
+
+          <!-- <h1 style="margin-top:50px;" id="texto-form">Pesquisa de Satisfação</h1> -->
+          <div class="formulario-dados">
+            <div class="row">
+              <div class="flex texto-pergunta">
+                <span id="pergunta-descricao">1. </span> 
+                <span>Qual foi seu nível de satisfação geral com o evento?</span>
+              </div>
+              <div class="star-rating">
+                <span class="rating">
+                  <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11638Nota1" name="data[pergunta][11638][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11638Nota1" class="rating-star">Excelente</label>
+                  
+                  <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11638Nota2" name="data[pergunta][11638][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11638Nota2" class="rating-star">Bom</label>
+                  
+                  <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11638Nota3" name="data[pergunta][11638][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11638Nota3" class="rating-star">Razoável</label>
+                  
+                  <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11638Nota4" name="data[pergunta][11638][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11638Nota4" class="rating-star">Ruim</label>
+                  
+                  <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11638Nota5" name="data[pergunta][11638][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11638Nota5" class="rating-star">Péssimo</label>
+                </
+                span>
+                <p style="display: none;" id="item-validacao-1">Esse item não foi avaliado.</p>
+              </div>
+            </div><!-- .row -->
+            <hr>
+            <div class="row">
+              <div class="flex texto-pergunta">
+                <span id="pergunta-descricao" style="margin-bottom: 20px;">2. </span>
+                <span> 
+                  Como você avalia a organização do evento (incrição, ligística, 
+                  horários etc.)?
+                </span> 
+              </div>
+              <div class="star-rating">
+                <span class="rating">
+                  <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11639Nota1" name="data[pergunta][11639][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11639Nota1" class="rating-star">Excelente</label>
+                  
+                  <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11639Nota2" name="data[pergunta][11639][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11639Nota2" class="rating-star">Bom</label>
+                  
+                  <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11639Nota3" name="data[pergunta][11639][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11639Nota3" class="rating-star">Razoável</label>
+                  
+                  <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11639Nota4" name="data[pergunta][11639][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11639Nota4" class="rating-star">Ruim</label>
+                  
+                  <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11639Nota5" name="data[pergunta][11639][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11639Nota5" class="rating-star">Péssimo</label>
+                </
+                span>
+                <p style="display: none;" id="item-validacao-2">Esse item não foi avaliado.</p>
+              </div>
+            </div><!-- .row -->
+            <hr>
+            <div class="row">
+              <div class="flex texto-pergunta">
+                <span id="pergunta-descricao" style="margin-bottom: 20px;">3. </span>
+                <span> 
+                  O local e a infraestrutura do evento atenderam às suas expectativas?
+                </span> 
+              </div>
+              <div class="star-rating">
+                <span class="rating">
+                  <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11640Nota1" name="data[pergunta][11640][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11640Nota1" class="rating-star">Excelente</label>
+                  
+                  <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11640Nota2" name="data[pergunta][11640][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11640Nota2" class="rating-star">Bom</label>
+                  
+                  <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11640Nota3" name="data[pergunta][11640][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11640Nota3" class="rating-star">Razoável</label>
+                  
+                  <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11640Nota4" name="data[pergunta][11640][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11640Nota4" class="rating-star">Ruim</label>
+                  
+                  <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11640Nota5" name="data[pergunta][11640][nota]">
+                  <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11640Nota5" class="rating-star">Péssimo</label>
+                </
+                span>
+                <p style="display: none;" id="item-validacao-3">Esse item não foi avaliado.</p>
+              </div>
+            </div><!-- .row -->
+              <hr>    
+            <div class="row">
+              <div class="flex texto-pergunta">
+                <span id="pergunta-descricao" style="margin-bottom: 20px;">4. </span>
+                <span>
+                  Como você avalia a qualidade dos palestrantes/apresentarodes?
+                </span> 
+              </div>
+              <div class="star-rating">
+                <span class="rating">
+                <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11641Nota1" name="data[pergunta][11641][nota]">
+                <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11641Nota1" class="rating-star">Excelente</label>
+                
+                <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11641Nota2" name="data[pergunta][11641][nota]">
+                <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11641Nota2" class="rating-star">Bom</label>
+                
+                <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11641Nota3" name="data[pergunta][11641][nota]">
+                <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11641Nota3" class="rating-star">Razoável</label>
+                
+                <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11641Nota4" name="data[pergunta][11641][nota]">
+                <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11641Nota4" class="rating-star">Ruim</label>
+                
+                <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11641Nota5" name="data[pergunta][11641][nota]">
+                <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11641Nota5" class="rating-star">Péssimo</label>
+                
+              </span>
+                <p style="display: none;" id="item-validacao-4">Esse item não foi avaliado.</p>
+              </div>
+            </div><!-- .row -->
+              <hr>         
+            <div class="row">
+              <div class="flex texto-pergunta">
+                <span id="pergunta-descricao" style="margin-bottom: 20px;">5. </span>
+                <span>
+                  O conteúdo apresentado foi relevante e útil para você?
+                </span> 
+              </div>
+              <div class="star-rating">
+                <span class="rating">
+                    <input title="Excelente" type="radio" class="rating-input" value="5" id="Pergunta11650Nota1" name="data[pergunta][11650][nota]">
+                    <label data-toggle="tooltip" data-placement="bottom" title="Excelente" for="Pergunta11650Nota1" class="rating-star">Excelente</label>
+                    
+                    <input title="Bom" type="radio" class="rating-input" value="4" id="Pergunta11650Nota2" name="data[pergunta][11650][nota]">
+                    <label data-toggle="tooltip" data-placement="bottom" title="Bom" for="Pergunta11650Nota2" class="rating-star">Bom</label>
+                    
+                    <input title="Razoável" type="radio" class="rating-input" value="3" id="Pergunta11650Nota3" name="data[pergunta][11650][nota]">
+                    <label data-toggle="tooltip" data-placement="bottom" title="Razoável" for="Pergunta11650Nota3" class="rating-star">Razoável</label>
+                    
+                    <input title="Ruim" type="radio" class="rating-input" value="2" id="Pergunta11650Nota4" name="data[pergunta][11650][nota]">
+                    <label data-toggle="tooltip" data-placement="bottom" title="Ruim" for="Pergunta11650Nota4" class="rating-star">Ruim</label>
+                    
+                    <input title="Péssimo" type="radio" class="rating-input" value="1" id="Pergunta11650Nota5" name="data[pergunta][11650][nota]">
+                    <label data-toggle="tooltip" data-placement="bottom" title="Péssimo" for="Pergunta11650Nota5" class="rating-star">Péssimo</label>
+                </sp
+                an>
+                <p style="display: none;" id="item-validacao-5">Esse item não foi avaliado.</p>
+              </div>
+            </div><!-- .row -->
+          </div><!-- .formulario-dados -->
+            
+          <div class="row comentario">
+            <div class="textarea"><label for="PesquisaAvaliacaoComentario">Deixe o seu comentário</label>
+              <textarea  name="data[PesquisaAvaliacao][comentario]" rows="3" class="form-control" required="required" cols="30" style="resize: none; max-width: 861; height: 123px;"  id="PesquisaAvaliacaoComentario"></textarea>
+            </div>
+            <br>
+            <div style="display:none;">
+              <input type="hidden" name="data[_Token][fields]" value="9147b88897edd3b6542ca4589e5555f9a3c0f8da%3A" id="TokenFields1616892081">
+              <input type="hidden" name="data[_Token][unlocked]" value="" id="TokenUnlocked826685311">
+            </div>                
+          </div>
+          <div class="botao-gigante flex justify-end">
+            <button class="__button-avaliar botao-padrao botao-grande botao-erro" style="margin-top: 20px;" type="submit">Enviar</button>
+          </div>
+        </div><!-- .dados-avaliar -->
+      </div><!-- .container-avaliacao-apresentacao -->
+    </div><!-- .dados-avaliacao -->
+
+    <!-- :footer -->
+    <div class="footer" style="padding-left:20px;padding-right:20px;">
+      <div class="container-avaliacao ds-items-lados-extremos ds-items-vertical-align-middle" style="margin-bottom:0;">
         <div class="ds-column-half">
-           <a href="https://doity.com.br/" class="ds-btn-bordered">Crie um evento gratuitamente</a>
+          <div class="ds-flex-row ds-items-vertical-align-middle">
+            <a href="http://doity.com.br/" target="_blank"><img src="/assets/images/logo-negative.png" width="72px" alt=""></a>
+            <span style="margin-left:10px;color:#fff;font-size:10px;text-transform:uppercase;">Plataforma de Eventos</span>
+          </div>
         </div>
-
+        <div class="ds-column-half">
+          <a href="https://doity.com.br/" class="ds-btn-bordered">Crie um evento gratuitamente</a>
+        </div>
+      </div>
     </div>
-
-</div>
-
-
-
-</body></html>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+.quantidade-respostas p {
+  color: #18181B !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.resultados-pesquisa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  gap: 15px;
+}
+
+.resultados-pesquisa h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 16px;
+  margin: 2px;
+}
+
+.table:not(.dataTable) {
+  border: 1px solid #EBEBEB;
+  border-collapse: collapse;
+}
+
+.table-resultados {
+  background-color: #FFFFFF;
+  padding: 35px;
+  margin-top: 35px;
+}
+
+.table-resultados h3 {
+  color: #4A4A4A;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 35px 0;
+}
+
+.table-resultados h3 span {
+  color: #777777
+}
+
+.table-resultados h2 {
+  padding-top: 30px;
+}
+
+.table-resultados td {
+  background-color: #FFFFFF;
+  vertical-align: middle;
+}
+
+.table-resultados td p {
+  text-align: start
+}
