@@ -22,6 +22,44 @@
   margin: 2px;
 }
 
+.loading,
+.loading > span {
+  height: 20px;
+  border-radius: 15px;
+}
+
+.loading {
+  width: 100%;
+  background-color: #D9D9D9;
+  margin-bottom: 11px;
+}
+
+.loading.green span {
+  background-color: #66BB33;
+}
+
+.loading.yellow span {
+  background-color: #C5C772;
+}
+
+.loading.gold span {
+  background-color: #DFAD40;
+}
+
+.loading.pink span {
+  background-color: #E66699
+}
+
+.loading.red span {
+  background-color: #FF2B34;
+}
+
+span {
+  display: inline-block;
+}
+
+
+
 .table:not(.dataTable) {
   border: 1px solid #EBEBEB;
   border-collapse: collapse;

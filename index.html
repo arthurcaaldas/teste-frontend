@@ -34,7 +34,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/flexbox.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/pesquisa.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/resultados.css">
-
+		
 		
 		<link rel="shortcut icon" href="assets/images/favicon.png">
 		<link rel="apple-touch-icon" href="https://grcmlesydpcd.objectstorage.sa-saopaulo-1.oci.customer-oci.com/p/OQwcvnO-c63O08Gc2Kv4OTbJttj5ik60dguiDIyyQ0wuo5SWn-jHOLW9wNbylNqI/n/grcmlesydpcd/b/dtysppobjmntbkp01/o/media/doity/favicon.png">
@@ -728,7 +728,7 @@
 									</p> 
 									<span style="display: flex; flex-direction: column; justify-content: center; width: fit-content;">Pesquisa de Satisfação</span>
 								</div>
-
+								
 								<div class="pesquisa-acoes">
 									<a class="botao-padrao botao-grande" href="https://doity.com.br/admin/pesquisas_resultados/index/1402">
 										Resultados da Pesquisa
@@ -769,36 +769,18 @@
 												</div>
 											</div>
 										</div>
-									
+										
 										<table class="table-resp">
 											<thead>
 												<tr class="table-header">
-													<th style="padding: 17.5px 10px;"">Perguntas <span>(16)</span></th>
+													<th style="padding: 17.5px 10px;">Perguntas <span>(16)</span></th>
 													<th style="text-align: center; padding-right: 10px;">Ações</th>
 												</tr>
 											</thead>
-											<tbody>
-												<tr>
-													<td data-th="Nome" style="padding: 17.5px 10px;">Você gostou do evento?</td>
-													<td data-th="Ações" style="text-align: center;">
-														<a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11638">
-															<img src="/assets/images/icons-editar-12px.png" width="14px" height="14px" alt="">
-														</a> 
-														
-														<form action="https://doity.com.br/admin/pesquisas_perguntas/delete/11638" name="post_692ddd2707ec5683564929" id="post_692ddd2707ec5683564929" style="display:none;" method="post">
-															<input type="hidden" name="_method" value="POST">
-															<input type="hidden" name="data[_Token][key]" value="d0a4d7808b25367c63670521594f8e66817be9c43decf001d7e9bc5762307bf6ce980aef69628051e22199ee2c3e64a5adda23f162fb08da27233fee6ad138bd" id="Token1852135797">
-															<div style="display:none;">
-																<input type="hidden" name="data[_Token][fields]" value="900ff7a50a7e7b09d1bc55cc314c075b50f52150%3A" id="TokenFields7240585">
-																<input type="hidden" name="data[_Token][unlocked]" value="" id="TokenUnlocked1137798274">
-															</div>
-														</form>
-														<a href="#">
-															<img src="assets/images/delete.svg" width="14px" height="14px" alt="">
-														</a>
-													</td>
-												</tr>
-												<tr style="background-color: rgb(248, 248, 248);">
+											<tbody id="pesquisa-perguntas">
+												<!-- Aqui vamos iterar as perguntas -->
+												
+												<!-- <tr style="background-color: rgb(248, 248, 248);">
 													<td data-th="Nome" style="padding: 17.5px 10px;">Qual nota você daria para a organização?</td>
 													<td data-th="Ações" style="text-align: center;">
 														<a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11639">
@@ -816,14 +798,14 @@
 															<img src="assets/images/delete.svg" width="14px" height="14px" alt="">
 														</a>
 													</td>
-												</tr>
+												</tr> -->
 												<!-- <tr>
 													<td data-th="Nome" style="padding: 17.5px 10px;">A qualidade dos palestrantes foi satisfatória? <span class="obrigatorio">*</span></td>
 													<td data-th="Ações" style="text-align: center;">
 														<a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11640">
 															<img src="/assets/images/icons-editar-12px.png" width="14px" height="14px" alt="">
 														</a>
-														 
+														
 														<form action="https://doity.com.br/admin/pesquisas_perguntas/delete/11640" name="post_692ddd2708275959402913" id="post_692ddd2708275959402913" style="display:none;" method="post">
 															<input type="hidden" name="_method" value="POST">
 															<input type="hidden" name="data[_Token][key]" value="d0a4d7808b25367c63670521594f8e66817be9c43decf001d7e9bc5762307bf6ce980aef69628051e22199ee2c3e64a5adda23f162fb08da27233fee6ad138bd" id="Token2115250840">
@@ -843,7 +825,7 @@
 														<a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11641">
 															<img src="/assets/images/icons-editar-12px.png" width="14px" height="14px" alt="">
 														</a>
-														 
+														
 														<form action="https://doity.com.br/admin/pesquisas_perguntas/delete/11641" name="post_692ddd27083f5786625006" id="post_692ddd27083f5786625006" style="display:none;" method="post">
 															<input type="hidden" name="_method" value="POST">
 															<input type="hidden" name="data[_Token][key]" value="d0a4d7808b25367c63670521594f8e66817be9c43decf001d7e9bc5762307bf6ce980aef69628051e22199ee2c3e64a5adda23f162fb08da27233fee6ad138bd" id="Token970684964">
@@ -863,7 +845,7 @@
 														<a href="https://doity.com.br/admin/pesquisas_perguntas/edit/11650">
 															<img src="/assets/images/icons-editar-12px.png" width="14px" height="14px" alt="">
 														</a>
-														 
+														
 														<form action="https://doity.com.br/admin/pesquisas_perguntas/delete/11650" name="post_692ddd2708560114869397" id="post_692ddd2708560114869397" style="display:none;" method="post">
 															<input type="hidden" name="_method" value="POST">
 															<input type="hidden" name="data[_Token][key]" value="d0a4d7808b25367c63670521594f8e66817be9c43decf001d7e9bc5762307bf6ce980aef69628051e22199ee2c3e64a5adda23f162fb08da27233fee6ad138bd" id="Token628605233">
@@ -879,16 +861,50 @@
 												</tr>   -->         
 											</tbody>
 										</table>
-
 									</div>    
-									<div class="botao-gigante">
-										<a class="botao-padrao botao-grande" style="margin-top: 30px;" href="https://doity.com.br/admin/pesquisas_perguntas/add/1402">Adicionar pergunta</a>		            		
-									</div>
+
+									<button
+										id="abrir-formulario"
+										type="button"
+										class="botao-padrao botao-grande"
+										style="margin-top: 30px;"
+										href="https://doity.com.br/admin/pesquisas_perguntas/add/1402">
+										Adicionar pergunta
+									</button>
+									
+									<form id="formulario-pergunta" style="display: none;">
+										<div class="pergunta-container">
+											<div class="input text required flex flex-direction-column">
+												<label for="input-pergunta">Pergunta<b>*</b></label>
+												<input id="input-pergunta" name="input-pergunta" type="text" required="required" value="">
+											</div>
+											<div class="input checkbox flex">
+												<input type="checkbox" id="pergunta_obrigatoria" name="pergunta_obrigatoria">
+												<label for="pergunta_obrigatoria">Obrigatório</label>
+											</div>
+										</div>
+										<div class="row flex justify-space-between align-items-center" style="margin-top: 20px;">
+											<button id="cancelar-pergunta" type="button" class="botao-padrao botao-grande2">
+												Cancelar
+											</button>                
+											<button id="adiciona-pergunta" type="button" class="botao-padrao botao-grande2 botao-erro">
+												Adicionar
+											</button>             
+										</div>
+									</form>
+									
 								</div>
 								<div class="botao-gigante flex justify-end" style="width: 100%;">
-									<a class="botao-padrao botao-erro botao-grande" href="#" data-toggle="tooltip" title="Pesquisa já foi enviada. Não é possível enviar a pesquisa novamente" style="margin-top: 20px;">Enviar pesquisa</a>          	 
+									<a
+										id="enviar-pesquisa"
+										class="botao-padrao botao-erro botao-grande"
+										data-toggle="tooltip"
+										title="Pesquisa já foi enviada. Não é possível enviar a pesquisa novamente"
+										style="margin-top: 20px;">
+										Enviar pesquisa
+									</a>          	 
 								</div>
-                                
+								
 								<!-- MENSAGEM PERGUNTANDO SE DESEJA ENVIAR PARA E-MAIL PARA OS PARTICIPANTES INFORMANDO QUE O CERTIFICADO ESTÁ LIBERADO -->
 								<div id="container">
 									<div id="content">
@@ -1044,5 +1060,11 @@
 			}
 		</style>
 		
-	</body>
+	<script
+		src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+		crossorigin="anonymous">
+	</script>
+	<script src="assets/js/script.js"></script>
+</body>
 </html>

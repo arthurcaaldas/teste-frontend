@@ -126,13 +126,38 @@ table tr {
   width: 50%;
 }
 
+.pergunta-container label:first-child {
+  color: #414651;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+.pergunta-container input {
+  border: 1px solid #D5D7DA;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.pergunta-container {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.checkbox input {
+  margin-right: 8px;
+  margin-bottom: 36px;
+}
+
 /* -- botão -- */
 
 a.botao-padrao {
   text-decoration: none;
 }
 
-.botao-padrao {
+.botao-padrao,
+button.botao-padrao {
   display: inline-block;
   
   background-color: #F9FAFB;
@@ -144,22 +169,26 @@ a.botao-padrao {
   padding: 6px 25px;
 }
 
-.botao-pequeno {
+.botao-pequeno,
+button.botao-pequeno {
   font-size: 12px;
   padding: 10px 25px;
 }
 
-.botao-grande {
+.botao-grande,
+button.botao-grande {
   font-size: 14px;
   padding: 12px 20px;
 }
 
-.botao-grande2 {
+.botao-grande2,
+button.botao-grande2 {
   font-size: 14px;
   padding: 13.5px 20px;
 }
 
-.botao-extra-grande {
+.botao-extra-grande,
+button.botao-extra-grande {
   font-size: 12px;
   padding: 15px 25px;
 }
